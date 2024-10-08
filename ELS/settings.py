@@ -20,7 +20,7 @@ POSTGRES_LOCALLY = os.environ.get('POSTGRES_LOCALLY', 'False') == 'True'
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-l#o2o72147o#6x13fl*evmoe#4gbhw_*!of06e6+83)&dj*v&)')
 DEBUG = os.environ.get('DEBUG', 'False') == 'False'
-ALLOWED_HOSTS = ['https://web-production-6cb9.up.railway.app']
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-6cb9.up.railway.app']
 
 # Application definition
