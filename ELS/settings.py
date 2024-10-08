@@ -299,13 +299,18 @@ PESEPAY_API_KEY = '2fc1978431b434e4993a88a4d44e795f'  # Replace with your encryp
 PESEPAY_MERCHANT_ID = 'cdf9a77f-7348-4654-ad5a-11609b5672a7'  # Replace with your integration key
 PESEPAY_API_URL = 'https://api.pesepay.com/api/payments-engine/v1/payments/initiate'  # Default PesePay API URL
 
+# settings.py
+
+import os
+from pathlib import Path
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('PGDATABASE'),
-        'USER': os.environ.get('PGUSER'),
-        'PASSWORD': os.environ.get('PGPASSWORD'),
-        'HOST': os.environ.get('PGHOST'),
-        'PORT': os.environ.get('PGPORT'),
+        'NAME': os.environ.get('railway'),
+        'USER': os.environ.get('postgres'),
+        'PASSWORD': os.environ.get('eqTtrFbtwxiLUJzrqiPiiJQvyvdvdzBu'),
+        'HOST': os.environ.get('postgres.railway.internal'),
+        'PORT': os.environ.get('5432'),
     }
 }
