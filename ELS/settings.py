@@ -72,18 +72,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ELS.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 import dj_database_url
 database_url = os.environ.get("DATABASE_URL")
 DATABASES["default"] = dj_database_url.parse(database_url)
 #postgresql://els_user:5Hfpnlqduy5EoCoyRMvaFZu3rjTG4jQ4@dpg-cs2rvle8ii6s738bb9rg-a.oregon-postgres.render.com/els
-
-DATABASES 
 
 # Custom User Model
 AUTH_USER_MODEL = 'users.CustomUser'
