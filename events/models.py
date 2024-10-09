@@ -28,13 +28,7 @@ class Booking(models.Model):
     ticket_quantity = models.IntegerField()  
     total_cost = models.DecimalField(max_digits=10, decimal_places=2)  
 
-    # Payment-related fields
-    payment_id = models.CharField(max_length=100, blank=True, null=True)  # To store the payment gateway's transaction ID
-    status = models.CharField(max_length=20, choices=[
-        ('pending', 'Pending'),
-        ('paid', 'Paid'),
-        ('failed', 'Failed')
-    ], default='pending')
+
 
     def save(self, *args, **kwargs):
         # Ensure ticket_quantity is an integer
@@ -50,4 +44,4 @@ class Booking(models.Model):
         self.event.save()
 
     def __str__(self):
-        return f"Booking for {self.event.name} by {self.user.username} - Status: {self.status}"
+        return f"Booking for {self.event.name} by {self.user.username} "
